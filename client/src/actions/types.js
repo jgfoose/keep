@@ -1,0 +1,11 @@
+export const FETCH_USER = "fetch_user";
+export const CREATE_CARD = "create_card";
+export const CREATE_LABEL = "create_label";
+export const DELETE_LABEL = "delete_label";
+export const UPDATE_FILTER = "update_filter";
+export const UPDATE_HEADER = "update_header";
+export const ADD_ITEM = "add_item";
+export const DELETE_ITEM = "delete_item";
+export const CARD_COLOR = "card_color";
+export const DELETE_CARD = "delete_card";
+export const FETCH_CARDS = "fetch_cards";

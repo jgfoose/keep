@@ -1,0 +1,392 @@
+$font-stack-primary: "Google Sans", Roboto, Arial, sans-serif;
+
+$card_yellow: #fff475;
+$card_blue: #a7ffeb;
+$card_purple: #fdcfe8;
+$card_green: #ccff90;
+$card_red: #f28b82;
+$card_white: #fff;
+
+body {
+  font-size: 15px;
+}
+
+::placeholder {
+  color: #212529;
+  text-align: center;
+}
+
+#root {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 100%;
+  }
+}
+
+#newCard {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #9894e4e6;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  position: fixed;
+  z-index: 1000;
+  right: 5%;
+  bottom: 5%;
+}
+
+#root .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 235px;
+  margin-right: 0;
+  padding: 0 1rem;
+}
+
+/* COMPONENTS */
+#root .side_nav {
+  bottom: 0;
+  width: 210px;
+  max-width: 210px;
+  padding: 25px 0 25px 0;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  position: fixed;
+  list-style: none;
+  top: 57px;
+  z-index: 100;
+  .delete_label {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 11px;
+    vertical-align: top;
+    width: 11%;
+    float: right;
+  }
+  a {
+    color: #343a40;
+    font-weight: 600;
+  }
+  .label_input {
+    display: block;
+    padding: 0.2rem 1rem;
+    width: 90%;
+    height: 33px;
+    margin: 20px auto 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1rem;
+    border: 1px solid;
+  }
+  .add_label {
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.87);
+    background: #fff;
+    width: 75%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    letter-spacing: 0.01785714em;
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1rem;
+    height: 33px;
+    padding: 8px 24px;
+    margin: 10px auto;
+    border-radius: 15px;
+    border: 1px solid;
+  }
+}
+
+.navbar-expand .navbar-toggler {
+  display: flex !important;
+}
+
+.navbar-light .navbar-toggler {
+  margin-right: 15px;
+}
+
+#side_toggle {
+  top: 0;
+  flex: 20%;
+  right: 0;
+  bottom: 0;
+}
+
+#card_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 0 auto;
+  font-size: 15px;
+  width: 100%;
+}
+
+#root .card {
+  width: 230px;
+  margin: 5px 7px 20px;
+  transform: translate(0px, 40px);
+  padding: 5px;
+  text-align: left;
+  background-color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  border-radius: 8px;
+  &.yellow {
+    background-color: $card_yellow;
+  }
+  &.blue {
+    background-color: $card_blue;
+  }
+  &.purple {
+    background-color: $card_purple;
+  }
+  &.green {
+    background-color: $card_green;
+  }
+  &.red {
+    background-color: $card_red;
+  }
+  &.white {
+    background-color: $card_white;
+  }
+  li {
+    width: 100px;
+  }
+  .card_header {
+    display: flex;
+  }
+  input {
+    display: inline-block;
+    margin: 25px 0 0;
+    color: #212529;
+    letter-spacing: 0.01785714em;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    background: transparent;
+    border: none;
+  }
+  .cardTitle {
+    width: 100%;
+    vertical-align: top;
+    color: #000;
+    font-size: 16px;
+    justify-content: center;
+    text-align: center;
+    margin: 0 0 17px 20px;
+    text-transform: uppercase;
+  }
+  .itemInput {
+    width: 80%;
+    display: block;
+    margin: 20px auto 10px;
+    padding: 4px;
+    font-size: 13px;
+    border: 1px solid;
+  }
+  .delete_input {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 11px;
+    display: inline-block;
+    vertical-align: top;
+    width: 11%;
+  }
+  .list_item {
+    width: 92%;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 4px;
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: capitalize;
+  }
+
+  .list_item_text {
+    display: inline-block;
+    width: 89%;
+  }
+  .delete_card {
+    float: right;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    height: 24px;
+  }
+  .color_options {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 25px auto 0;
+    padding: 4px;
+  }
+  .card_label {
+    background: transparent;
+    color: #212529;
+    text-align: center;
+    letter-spacing: 0.01785714em;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.25rem;
+    width: 80%;
+    height: 30px;
+    display: block;
+    margin: 20px auto 10px;
+    padding: 4px;
+    font-size: 13px;
+    border: 1px solid;
+  }
+}
+.color_option {
+  height: 20px;
+  width: 20px;
+  border: solid 2px #000;
+  border-radius: 9px;
+  display: inline-flex;
+  margin: 0 3px;
+  padding: 0px;
+  cursor: pointer;
+  &.white {
+    background-color: $card_white;
+  }
+  &.yellow {
+    background-color: $card_yellow;
+  }
+  &.blue {
+    background-color: $card_blue;
+  }
+  &.purple {
+    background-color: $card_purple;
+  }
+  &.green {
+    background-color: $card_green;
+  }
+  &.red {
+    background-color: $card_red;
+  }
+}
+@media only screen and (max-width: 750px) {
+  #card_container {
+    flex-direction: column;
+  }
+
+  #root .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 1rem;
+  }
+
+  #card_container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #root .card {
+    width: 75%;
+    max-width: 325px;
+    .color_option {
+      height: 30px;
+      width: 30px;
+      border: solid 2px #000;
+      border-radius: 30px;
+      display: inline-flex;
+      margin: 0 3px;
+      padding: 0px;
+      cursor: pointer;
+    }
+  }
+
+  #root .side_nav {
+    position: fixed;
+    width: 60%;
+    max-width: 80%;
+    height: 100%;
+    top: 56px;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 8px 0px 7px -6px rgba(0, 0, 0, 0.14);
+    .label_input {
+      display: block;
+      padding: 0.2rem 1rem;
+      width: 90%;
+      height: 33px;
+      margin: 20px auto 0;
+      font-size: 0.8rem;
+      font-weight: 500;
+      line-height: 1rem;
+    }
+    .add_label {
+      box-sizing: border-box;
+      color: rgba(0, 0, 0, 0.87);
+      width: 60%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      letter-spacing: 0.01785714em;
+      font-size: 0.8rem;
+      font-weight: 500;
+      line-height: 1rem;
+      height: 33px;
+      padding: 8px 24px;
+      margin: 10px auto;
+      border-radius: 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #root .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 1rem;
+  }
+
+  #card_container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .card {
+    width: 90%;
+    max-width: 325px;
+    .color_option {
+      height: 30px;
+      width: 30px;
+      border: solid 2px #000;
+      border-radius: 30px;
+      display: inline-flex;
+      margin: 0 3px;
+      padding: 0px;
+      cursor: pointer;
+    }
+  }
+}
