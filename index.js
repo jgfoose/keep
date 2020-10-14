@@ -9,9 +9,7 @@ require("./models/Cards");
 require("./models/Labels");
 require("./services/passport");
 
-mongoose
-  .connect(keys.mongoURI, { useNewUrlParser: true })
-  .catch((error) => handleError(error));
+mongoose.connect(keys.mongoURI, { useNewUrlParser: true });
 mongoose.set("useUnifiedTopology", true);
 
 //Create express app
