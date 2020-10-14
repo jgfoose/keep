@@ -25,7 +25,7 @@ passport.use(
       proxy: true,
     },
     async (accessToken, refreshToken, profile, done) => {
-      const existingUser = "test";
+      const existingUser = true;
 
       if (existingUser) {
         // we already have a record with given id
