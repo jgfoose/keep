@@ -10,10 +10,14 @@ module.exports = (app) => {
   );
 
   //Route handler
-  app.get("/auth/google/callback", function (req, res) {
-    // Successful authentication, redirect home.
-    res.redirect("/reactKeep");
-  });
+  app.get(
+    "/auth/google/callback",
+    passport.authenticate("google", { failureRedirect: "/" }),
+    function (req, res) {
+      // Successful authentication, redirect home.
+      res.redirect("/reactKeep");
+    }
+  );
 
   app.get("/api/logout", (req, res) => {
     req.logout();
