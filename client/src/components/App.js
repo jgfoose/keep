@@ -19,8 +19,12 @@ class App extends Component {
       <div className="container">
         <BrowserRouter>
           <Nav />
-          <Route exact path="/" component={this.props.auth ? Home : Landing} />
-          <Route path="/reactKeep" component={Home} />
+          <Route
+            exact
+            path="/keep"
+            component={this.props.auth ? Home : Landing}
+          />
+          <Route path="keep/reactKeep" component={Home} />
         </BrowserRouter>
       </div>
     );
